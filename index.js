@@ -16,3 +16,4 @@ app.all('*',(req,res)=>{
 runDB()
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+ 
