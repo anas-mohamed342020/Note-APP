@@ -10,7 +10,9 @@ const port = process.env.port
 app.use(express.json())
 
 app.use(userRouter,noteRouter)
-
+app.all('*',(req,res)=>{
+  res.json({message:"in-valid URL"})
+})
 runDB()
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
